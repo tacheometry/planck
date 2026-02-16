@@ -19,9 +19,8 @@ Run Conditions are very simple, they are just functions that return true or
 false.
 
 :::note
-One system may have multiple Run Conditions. If at least one Run Condition
-returns `false`, the system's execution will be skipped. Void or `nil`
-values get interpreted as truthy and will not prevent the system from running.
+One System/Phase/Pipeline may have multiple Run Conditions. If at least one Run Condition
+returns a falsy value (`nil`, `void`, `false`), its execution will be skipped.
 :::
 
 We can set a Run Condition on a System/Phase/Pipeline like so,
