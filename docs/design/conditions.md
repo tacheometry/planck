@@ -18,6 +18,10 @@ In Planck, we can assign *Run Conditions* to Systems, Phases, and Pipelines.
 Run Conditions are very simple, they are just functions that return true or
 false.
 
+One system may have multiple Run Conditions. If at least one Run Condition
+returns `false`, the system's execution will be skipped. Void or `nil`
+values get interpreted as truthy and will not prevent the system from running.
+
 We can set a Run Condition on a System/Phase/Pipeline like so,
 
 <Tabs groupId="language">
